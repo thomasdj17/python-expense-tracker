@@ -1,4 +1,5 @@
 expenses = []
+budget = float(input(f"What is your budget for the items?: "))
 
 for i in range(3):
     name = input(f"Enter expense {i+1} name: ")
@@ -12,3 +13,8 @@ for expense in expenses:
     total += expense[1]
 
 print(f"\nTotal spending: ${total}")
+if(total == budget):
+    print("\nYou stayed within the budget")
+elif(total < budget):
+    print("\nGood job staying under your budget")
+else: print("\nDo better with your budget")
